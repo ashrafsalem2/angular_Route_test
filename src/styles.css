@@ -31,3 +31,27 @@
     color:var(--white_color) !important;
     cursor: pointer;
 }
+
+/* global style for star icon */
+.icon:before{
+    content: "";
+    position: absolute;
+    left: -95px;
+    top: 10px;
+    width: 80px;
+    height: 4px;
+    background-color: #fff;
+}
+.icon:after{
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 10px;
+    width: 80px;
+    height: 4px;
+    background-color: #fff;
+}
+
+.w_88{
+    max-width: 88% !important;
+}
