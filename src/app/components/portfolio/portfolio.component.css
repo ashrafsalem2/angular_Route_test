@@ -1,0 +1,27 @@
+.icon:before{
+
+    background-color: #2C3E50;
+}
+.icon:after{
+
+    background-color: #2C3E50;
+}
+
+figure .layout{
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+figure  .layout:hover{
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 80%;
+    }
+
+}

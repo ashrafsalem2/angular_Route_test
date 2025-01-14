@@ -1,1 +1,72 @@
-<p>portfolio works!</p>
+<!-- image section -->
+ 
+
+
+<section
+  id="image_section"
+  style="background-color: var(--white_color)"
+  class="  position-relative"
+>
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="content w-50 text-center py-2">
+        <h1
+          class="nav_logo text-uppercase fw-bold pt-5"
+          style="font-size: 40px !important; color: #2c3e50 !important"
+        >
+          portfolio component
+        </h1>
+        <span
+          class="porto icon position-relative"
+          style="color: #2c3e50 !important"
+        >
+          <i class="fa-solid fa-star"></i>
+        </span>
+      </div>
+    </div>
+    <div class="row g-2">
+      @for(image of imageList; track $index){
+      <div class="col-md-6 col-lg-4">
+        <div class="content p-3">
+          <figure class="position-relative" #hoverName (mouseenter)="displayLayout(hoverName)" (mouseleave)="hideLayout(hoverName)" (click)="toggleSection(image)">
+            <img
+              [src]="image"
+              class="rounded-2"
+              alt="{{ image + $index }}"
+              style="width: 100%"
+            />
+            
+            <div
+              class="layout position-absolute top-0 start-0 end-0 bottom-0 rounded-2 d-flex justify-content-center align-items-center d-none"
+              style="background-color: var(--main_color)"
+            >
+              <div class="text-center">
+                <i class="fa-solid fa-plus fa-7x text-white"></i>
+              </div>
+            </div>
+           
+          </figure>
+        </div>
+      </div>
+      }
+    </div>
+
+    @if(imageSection){
+        <!-- selected image -->
+        <div class="position-fixed top-0 start-0 end-0 bottom-0 bg-dark min-vh-100 py-5" style="--bs-bg-opacity: .5;" (click)="dismissLayout($event)">
+            <div class="content d-flex justify-content-center align-items-center py-5">
+                <div class="content_2 py-5">
+                    <figure>
+                        <img [src]="defaultImg" width="600" alt="test">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    }
+
+  </div>
+</section>
+
+
+
+<app-info></app-info>
