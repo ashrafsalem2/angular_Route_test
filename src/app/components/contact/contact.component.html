@@ -1,1 +1,39 @@
-<p>contact works!</p>
+<div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="content text-center">
+          <h1
+            class="nav_logo text-uppercase fw-bold"
+            style="font-size: 40px !important; color: #2c3e50 !important"
+          >
+          conatct section
+          </h1>
+          <span
+            class="porto icon position-relative"
+            style="color: #2c3e50 !important"
+          >
+            <i class="fa-solid fa-star"></i>
+          </span>
+        </div>
+      </div>
+ <div class="d-flex justify-content-center align-items-center">
+    <form class="form w-50 row-gap-4 mt-5">
+        @for (field of fields; track $index) {
+            <div class="form-group">
+                <label [class.floated]="field.value || field.focused">{{ field.label }}</label>
+                <input
+                  type="text"
+                  [(ngModel)]="field.value"
+                  (focus)="field.focused = true"
+                  (blur)="field.focused = !field.value"
+                  required 
+                  [ngModelOptions]="{standalone: true}"
+                  class="form-control border-0 border-bottom py-3"
+                />
+              </div>
+        }
+        <button type="submit" class="btn btn-primary px-3 py-2 text-center" style="background-color: var(--main_color);">
+          Send Message
+        </button>
+      </form>
+ </div>
+</div>

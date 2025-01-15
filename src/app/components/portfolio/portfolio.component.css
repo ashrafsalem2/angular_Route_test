@@ -9,11 +9,11 @@
 
 figure .layout{
     cursor: pointer;
-    transition: 0.5s all;
+   
 }
 
 figure  .layout:hover{
-    animation: appear 0.5s forwards;
+    animation: appear 0.5s forwards ;
 }
 
 @keyframes appear{
