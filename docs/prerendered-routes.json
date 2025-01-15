@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/test": {},
+    "/test/about": {},
+    "/test/contact": {},
+    "/test/home": {},
+    "/test/portfolio": {}
+  }
+}
